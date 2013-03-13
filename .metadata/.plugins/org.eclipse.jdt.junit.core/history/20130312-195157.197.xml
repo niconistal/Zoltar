@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="AllTests" project="zelda-master" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="testCases.AllTests" time="11.21">
+    <testsuite name="testCases.linkShootArrow" time="5.662">
+      <testcase name="test" classname="testCases.linkShootArrow" time="5.662"/>
+    </testsuite>
+    <testsuite name="testCases.linkTest" time="5.548">
+      <testcase name="test" classname="testCases.linkTest" time="5.548"/>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,1176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.1" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="zelda.PolyCreator" project="zelda-master" 
+    file="/zelda-master/src/zelda/PolyCreator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="206" x="4733" y="2461"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="zelda.Controller" project="zelda-master" 
+    file="/zelda-master/src/zelda/Controller.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="170" width="195" x="4979" y="2197"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="zelda.View" project="zelda-master" file="/zelda-master/src/zelda/View.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="242" width="140" x="4979" y="2461"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" language="java" name="zelda.collision.Hittable" project="zelda-master" 
+    file="/zelda-master/src/zelda/collision/Hittable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="80" width="133" x="3860" y="4315"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <enumeration id="5" language="java" name="zelda.collision.Weapon" project="zelda-master" 
+    file="/zelda-master/src/zelda/collision/Weapon.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="134" width="137" x="3446" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="6" language="java" name="zelda.enemy.WalkState" project="zelda-master" 
+    file="/zelda-master/src/zelda/enemy/WalkState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="332" width="168" x="2269" y="2461"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="zelda.enemy.PatrolBehavior" project="zelda-master" 
+    file="/zelda-master/src/zelda/enemy/PatrolBehavior.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="188" width="195" x="4162" y="2833"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="zelda.enemy.TransState" project="zelda-master" 
+    file="/zelda-master/src/zelda/enemy/TransState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="242" width="191" x="2477" y="2461"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="zelda.enemy.WhiteSoldier" project="zelda-master" 
+    file="/zelda-master/src/zelda/enemy/WhiteSoldier.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="98" width="221" x="3900" y="3889"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="zelda.enemy.BossSoldier" project="zelda-master" 
+    file="/zelda-master/src/zelda/enemy/BossSoldier.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="98" width="217" x="3168" y="2461"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="zelda.enemy.BlueSoldier" project="zelda-master" 
+    file="/zelda-master/src/zelda/enemy/BlueSoldier.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="98" width="231" x="4161" y="3889"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="zelda.enemy.Behavior" project="zelda-master" 
+    file="/zelda-master/src/zelda/enemy/Behavior.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="98" width="101" x="4162" y="2461"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="zelda.enemy.RandomBehavior" project="zelda-master" 
+    file="/zelda-master/src/zelda/enemy/RandomBehavior.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="134" width="200" x="3922" y="2833"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="zelda.enemy.AttackBehavior" project="zelda-master" 
+    file="/zelda-master/src/zelda/enemy/AttackBehavior.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="134" width="162" x="4397" y="2833"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="zelda.enemy.StandState" project="zelda-master" 
+    file="/zelda-master/src/zelda/enemy/StandState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="170" width="155" x="2074" y="2461"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="zelda.enemy.Soldier" project="zelda-master" 
+    file="/zelda-master/src/zelda/enemy/Soldier.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="206" width="225" x="3840" y="2197"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="zelda.enemy.GhostSoldier" project="zelda-master" 
+    file="/zelda-master/src/zelda/enemy/GhostSoldier.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="98" width="222" x="3573" y="2461"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="zelda.enemy.armos.ArmosKnight" project="zelda-master" 
+    file="/zelda-master/src/zelda/enemy/armos/ArmosKnight.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="224" width="221" x="4105" y="2197"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="zelda.enemy.armos.AttackState" project="zelda-master" 
+    file="/zelda-master/src/zelda/enemy/armos/AttackState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="206" width="168" x="2708" y="2461"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="zelda.enemy.armos.TransState" project="zelda-master" 
+    file="/zelda-master/src/zelda/enemy/armos/TransState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="188" width="191" x="2916" y="2461"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="zelda.engine.Music" project="zelda-master" 
+    file="/zelda-master/src/zelda/engine/Music.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="170" width="210" x="5256" y="3889"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="zelda.engine.Sprite" project="zelda-master" 
+    file="/zelda-master/src/zelda/engine/Sprite.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="386" width="168" x="4816" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="zelda.engine.Game" project="zelda-master" 
+    file="/zelda-master/src/zelda/engine/Game.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1016" width="195" x="5019" y="2833"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="zelda.engine.Scene" project="zelda-master" 
+    file="/zelda-master/src/zelda/engine/Scene.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="458" width="215" x="4624" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="zelda.engine.GObject" project="zelda-master" 
+    file="/zelda-master/src/zelda/engine/GObject.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="980" width="240" x="4105" y="535"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="zelda.engine.Sound" project="zelda-master" 
+    file="/zelda-master/src/zelda/engine/Sound.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="224" width="131" x="5256" y="2461"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="zelda.engine.GObjectComparator" project="zelda-master" 
+    file="/zelda-master/src/zelda/engine/GObjectComparator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="98" width="171" x="2234" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="zelda.engine.SaveData" project="zelda-master" 
+    file="/zelda-master/src/zelda/engine/SaveData.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="188" width="154" x="1040" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="29" language="java" name="zelda.engine.DrawAble" project="zelda-master" 
+    file="/zelda-master/src/zelda/engine/DrawAble.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="80" width="152" x="4624" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="30" language="java" name="zelda.engine.SoundFx" project="zelda-master" 
+    file="/zelda-master/src/zelda/engine/SoundFx.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="98" width="144" x="5072" y="3889"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="zelda.items.Warp" project="zelda-master" 
+    file="/zelda-master/src/zelda/items/Warp.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="134" width="128" x="1885" y="2197"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="zelda.items.Heart" project="zelda-master" 
+    file="/zelda-master/src/zelda/items/Heart.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="153" x="3282" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="zelda.items.Guard" project="zelda-master" 
+    file="/zelda-master/src/zelda/items/Guard.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="152" width="185" x="3683" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="zelda.items.Arrow" project="zelda-master" 
+    file="/zelda-master/src/zelda/items/Arrow.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="350" width="165" x="2880" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="zelda.items.GuiHeart" project="zelda-master" 
+    file="/zelda-master/src/zelda/items/GuiHeart.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="206" width="158" x="3475" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="zelda.items.BombBehavior" project="zelda-master" 
+    file="/zelda-master/src/zelda/items/BombBehavior.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="152" width="150" x="5024" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="zelda.items.GuiRupee" project="zelda-master" 
+    file="/zelda-master/src/zelda/items/GuiRupee.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="98" width="157" x="3908" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="zelda.items.Bomb" project="zelda-master" 
+    file="/zelda-master/src/zelda/items/Bomb.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="152" width="156" x="4408" y="2197"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="zelda.items.Rupee" project="zelda-master" 
+    file="/zelda-master/src/zelda/items/Rupee.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="157" x="3085" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="zelda.items.Bush" project="zelda-master" 
+    file="/zelda-master/src/zelda/items/Bush.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="98" width="133" x="4430" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="41" language="java" name="zelda.karacter.Karacter" project="zelda-master" 
+    file="/zelda-master/src/zelda/karacter/Karacter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="224" width="264" x="4105" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="42" language="java" name="zelda.karacter.KaracterState" project="zelda-master" 
+    file="/zelda-master/src/zelda/karacter/KaracterState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="152" width="154" x="2916" y="2197"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="43" language="java" name="zelda.karacter.Direction" project="zelda-master" 
+    file="/zelda-master/src/zelda/karacter/Direction.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="152" width="137" x="2477" y="3889"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="44" language="java" name="zelda.link.TransState" project="zelda-master" 
+    file="/zelda-master/src/zelda/link/TransState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="242" width="168" x="2570" y="2833"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="45" language="java" name="zelda.link.LinkState" project="zelda-master" 
+    file="/zelda-master/src/zelda/link/LinkState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="80" width="108" x="3425" y="2461"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="46" language="java" name="zelda.link.Link" project="zelda-master" 
+    file="/zelda-master/src/zelda/link/Link.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="386" width="153" x="4432" y="3889"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="47" language="java" name="zelda.link.BowState" project="zelda-master" 
+    file="/zelda-master/src/zelda/link/BowState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="206" width="155" x="3202" y="2833"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="48" language="java" name="zelda.link.StandState" project="zelda-master" 
+    file="/zelda-master/src/zelda/link/StandState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="170" width="155" x="3397" y="2833"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="49" language="java" name="zelda.link.WalkState" project="zelda-master" 
+    file="/zelda-master/src/zelda/link/WalkState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="260" width="155" x="3007" y="2833"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="50" language="java" name="zelda.link.DeathState" project="zelda-master" 
+    file="/zelda-master/src/zelda/link/DeathState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="152" width="185" x="3634" y="2833"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="51" language="java" name="zelda.link.SwordState" project="zelda-master" 
+    file="/zelda-master/src/zelda/link/SwordState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="260" width="168" x="2799" y="2833"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="52" language="java" name="zelda.menu.Fairy" project="zelda-master" 
+    file="/zelda-master/src/zelda/menu/Fairy.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="98" width="126" x="2693" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="53" language="java" name="zelda.menu.HelpMenu" project="zelda-master" 
+    file="/zelda-master/src/zelda/menu/HelpMenu.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="134" width="125" x="1468" y="535"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="54" language="java" name="zelda.menu.MainMenu" project="zelda-master" 
+    file="/zelda-master/src/zelda/menu/MainMenu.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="260" width="125" x="3659" y="535"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="55" language="java" name="zelda.scene.CreditScene" project="zelda-master" 
+    file="/zelda-master/src/zelda/scene/CreditScene.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="225" x="573" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="56" language="java" name="zelda.scene.CastleScene" project="zelda-master" 
+    file="/zelda-master/src/zelda/scene/CastleScene.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="602" width="225" x="1103" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="57" language="java" name="zelda.scene.ForrestScene" project="zelda-master" 
+    file="/zelda-master/src/zelda/scene/ForrestScene.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="386" width="225" x="2163" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="58" language="java" name="zelda.scene.BattleScene" project="zelda-master" 
+    file="/zelda-master/src/zelda/scene/BattleScene.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="188" width="225" x="1368" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="59" language="java" name="zelda.scene.ZeldaScene" project="zelda-master" 
+    file="/zelda-master/src/zelda/scene/ZeldaScene.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="314" width="225" x="1633" y="535"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="60" language="java" name="zelda.scene.DungeonScene" project="zelda-master" 
+    file="/zelda-master/src/zelda/scene/DungeonScene.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="206" width="225" x="2428" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="61" language="java" name="zelda.scene.HyruleScene" project="zelda-master" 
+    file="/zelda-master/src/zelda/scene/HyruleScene.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="494" width="225" x="1633" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="62" language="java" name="zelda.scene.HiddenScene" project="zelda-master" 
+    file="/zelda-master/src/zelda/scene/HiddenScene.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="224" width="225" x="838" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="63" language="java" name="zelda.scene.CastleBasementScene" project="zelda-master" 
+    file="/zelda-master/src/zelda/scene/CastleBasementScene.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="332" width="227" x="41" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="64" language="java" name="zelda.scene.HouseScene" project="zelda-master" 
+    file="/zelda-master/src/zelda/scene/HouseScene.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="278" width="225" x="1898" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="65" language="java" name="zelda.scene.ArmosScene" project="zelda-master" 
+    file="/zelda-master/src/zelda/scene/ArmosScene.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="224" width="225" x="308" y="1555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <association id="66">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="67" name="game"/>      
+      <multiplicity id="68" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="69">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="70" name="sprite"/>      
+      <multiplicity id="71" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="72">    
+    <end type="SOURCE" refId="45"/>    
+    <end type="TARGET" refId="42"/>  
+  </generalization>  
+  <association id="73">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="74" name="gameObjects"/>      
+      <multiplicity id="75" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="76">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <generalization id="77">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="42"/>  
+  </generalization>  
+  <association id="78">    
+    <bendpoint x="2043" y="2197"/>    
+    <bendpoint x="2043" y="2461"/>    
+    <bendpoint x="2043" y="2833"/>    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="79" name="direction"/>      
+      <multiplicity id="80" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="43" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="81">    
+    <end type="SOURCE" refId="63"/>    
+    <end type="TARGET" refId="59"/>  
+  </generalization>  
+  <association id="82">    
+    <end type="SOURCE" refId="54" navigable="false">      
+      <attribute id="83" name="fairy"/>      
+      <multiplicity id="84" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="52" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="85">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <association id="86">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="87" name="behavior"/>      
+      <multiplicity id="88" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="89">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="42"/>  
+  </generalization>  
+  <generalization id="90">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="91">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="92" name="behavior"/>      
+      <multiplicity id="93" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="94">    
+    <end type="SOURCE" refId="53"/>    
+    <end type="TARGET" refId="24"/>  
+  </generalization>  
+  <association id="95">    
+    <bendpoint x="4593" y="1555"/>    
+    <bendpoint x="4636" y="2197"/>    
+    <bendpoint x="4636" y="2461"/>    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="96" name="game"/>      
+      <multiplicity id="97" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="98">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="99" name="link"/>      
+      <multiplicity id="100" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="46" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="101">    
+    <end type="SOURCE" refId="65" navigable="false">      
+      <attribute id="102" name="warp"/>      
+      <multiplicity id="103" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="104">    
+    <bendpoint x="4399" y="1555"/>    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <generalization id="105">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="106">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="107">    
+    <end type="SOURCE" refId="47"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <generalization id="108">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="24"/>  
+  </generalization>  
+  <association id="109">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="110" name="soldier"/>      
+      <multiplicity id="111" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="112">    
+    <end type="SOURCE" refId="45" navigable="false">      
+      <attribute id="113" name="game"/>      
+      <multiplicity id="114" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="115">    
+    <bendpoint x="2486" y="2833"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="116" name="direction"/>      
+      <multiplicity id="117" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="43" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="118">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <association id="119">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="120" name="fx"/>      
+      <multiplicity id="121" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="122">    
+    <bendpoint x="4589" y="2833"/>    
+    <bendpoint x="4483" y="2461"/>    
+    <bendpoint x="4377" y="2197"/>    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="41"/>  
+  </generalization>  
+  <association id="123">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="124" name="link"/>      
+      <multiplicity id="125" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="46" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="126">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <association id="127">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="128" name="bomb"/>      
+      <multiplicity id="129" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="130">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="131" name="hearts"/>      
+      <multiplicity id="132" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="133">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="134" name="soldier"/>      
+      <multiplicity id="135" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="136">    
+    <bendpoint x="3911" y="2461"/>    
+    <bendpoint x="3870" y="2833"/>    
+    <bendpoint x="3869" y="3889"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <generalization id="137">    
+    <end type="SOURCE" refId="64"/>    
+    <end type="TARGET" refId="59"/>  
+  </generalization>  
+  <generalization id="138">    
+    <end type="SOURCE" refId="49"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <generalization id="139">    
+    <bendpoint x="5265" y="2833"/>    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <association id="140">    
+    <bendpoint x="5225" y="2461"/>    
+    <bendpoint x="5225" y="2197"/>    
+    <bendpoint x="5225" y="1555"/>    
+    <bendpoint x="5225" y="535"/>    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="141" name="scene"/>      
+      <multiplicity id="142" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="143">    
+    <bendpoint x="3603" y="2833"/>    
+    <end type="SOURCE" refId="45" navigable="false">      
+      <attribute id="144" name="link"/>      
+      <multiplicity id="145" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="46" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="146">    
+    <bendpoint x="4594" y="2197"/>    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="147">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="148" name="newGameObjects"/>      
+      <multiplicity id="149" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="150">    
+    <bendpoint x="2518" y="2833"/>    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="151" name="direction"/>      
+      <multiplicity id="152" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="43" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="153">    
+    <end type="SOURCE" refId="44" navigable="false">      
+      <attribute id="154" name="direction"/>      
+      <multiplicity id="155" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="43" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="156">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <realization id="157">    
+    <bendpoint x="4615" y="2197"/>    
+    <bendpoint x="4615" y="2461"/>    
+    <bendpoint x="4615" y="2833"/>    
+    <bendpoint x="4615" y="3889"/>    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <generalization id="158">    
+    <end type="SOURCE" refId="44"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <association id="159">    
+    <end type="SOURCE" refId="42" navigable="false">      
+      <attribute id="160" name="karacter"/>      
+      <multiplicity id="161" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="162">    
+    <end type="SOURCE" refId="57"/>    
+    <end type="TARGET" refId="59"/>  
+  </generalization>  
+  <realization id="163">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <generalization id="164">    
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <generalization id="165">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="41"/>  
+  </generalization>  
+  <generalization id="166">    
+    <end type="SOURCE" refId="58"/>    
+    <end type="TARGET" refId="59"/>  
+  </generalization>  
+  <generalization id="167">    
+    <bendpoint x="2849" y="1555"/>    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <generalization id="168">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="42"/>  
+  </generalization>  
+  <association id="169">    
+    <bendpoint x="4729" y="535"/>    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="170" name="sprite"/>      
+      <multiplicity id="171" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="172">    
+    <end type="SOURCE" refId="55"/>    
+    <end type="TARGET" refId="59"/>  
+  </generalization>  
+  <generalization id="173">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="174">    
+    <bendpoint x="5204" y="535"/>    
+    <bendpoint x="5204" y="1555"/>    
+    <bendpoint x="5204" y="2197"/>    
+    <bendpoint x="5204" y="2461"/>    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="175" name="game"/>      
+      <multiplicity id="176" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="177">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="178" name="behavior"/>      
+      <multiplicity id="179" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="180">    
+    <bendpoint x="4356" y="2461"/>    
+    <bendpoint x="4356" y="2197"/>    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="181" name="soldier"/>      
+      <multiplicity id="182" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="183">    
+    <bendpoint x="3891" y="2833"/>    
+    <bendpoint x="3890" y="2461"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <realization id="184">    
+    <bendpoint x="3582" y="2833"/>    
+    <bendpoint x="3582" y="3889"/>    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <generalization id="185">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="42"/>  
+  </generalization>  
+  <generalization id="186">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <generalization id="187">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="41"/>  
+  </generalization>  
+  <generalization id="188">    
+    <end type="SOURCE" refId="60"/>    
+    <end type="TARGET" refId="59"/>  
+  </generalization>  
+  <generalization id="189">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <association id="190">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="191" name="polyCreator"/>      
+      <multiplicity id="192" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="193">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="42"/>  
+  </generalization>  
+  <association id="194">    
+    <bendpoint x="2285" y="2833"/>    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="195" name="oldDirection"/>      
+      <multiplicity id="196" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="43" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="197">    
+    <end type="SOURCE" refId="51"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <generalization id="198">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <generalization id="199">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <generalization id="200">    
+    <bendpoint x="5244" y="2833"/>    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <generalization id="201">    
+    <end type="SOURCE" refId="65"/>    
+    <end type="TARGET" refId="59"/>  
+  </generalization>  
+  <association id="202">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="203" name="behavior"/>      
+      <multiplicity id="204" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="205">    
+    <end type="SOURCE" refId="56"/>    
+    <end type="TARGET" refId="59"/>  
+  </generalization>  
+  <generalization id="206">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <generalization id="207">    
+    <end type="SOURCE" refId="37"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <generalization id="208">    
+    <bendpoint x="3849" y="2833"/>    
+    <bendpoint x="3849" y="2461"/>    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="209">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="210" name="game"/>      
+      <multiplicity id="211" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="212">    
+    <end type="SOURCE" refId="41" navigable="false">      
+      <attribute id="213" name="state"/>      
+      <multiplicity id="214" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="215">    
+    <bendpoint x="3137" y="2197"/>    
+    <bendpoint x="3137" y="2461"/>    
+    <bendpoint x="2539" y="2833"/>    
+    <end type="SOURCE" refId="41" navigable="false">      
+      <attribute id="216" name="direction"/>      
+      <multiplicity id="217" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="43" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="218">    
+    <end type="SOURCE" refId="62"/>    
+    <end type="TARGET" refId="59"/>  
+  </generalization>  
+  <association id="219">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="220" name="view"/>      
+      <multiplicity id="221" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="222">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="223" name="music"/>      
+      <multiplicity id="224" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="225">    
+    <bendpoint x="2768" y="2833"/>    
+    <bendpoint x="2768" y="3889"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <realization id="226">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="29"/>  
+  </realization>  
+  <association id="227">    
+    <bendpoint x="5149" y="2461"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="228" name="game"/>      
+      <multiplicity id="229" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="230">    
+    <end type="SOURCE" refId="50"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <association id="231">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="232" name="game"/>      
+      <multiplicity id="233" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="234">    
+    <end type="SOURCE" refId="59"/>    
+    <end type="TARGET" refId="24"/>  
+  </generalization>  
+  <realization id="235">    
+    <bendpoint x="4633" y="535"/>    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="29"/>  
+  </realization>  
+  <generalization id="236">    
+    <end type="SOURCE" refId="61"/>    
+    <end type="TARGET" refId="59"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
