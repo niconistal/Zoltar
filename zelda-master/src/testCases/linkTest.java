@@ -105,7 +105,7 @@ public class linkTest {
 
 		
 		
-		System.out.println(link.getX()+" "+link.getY());
+		//System.out.println(link.getX()+" "+link.getY());
 		assertEquals(3,malo.getHealth());
 		assertEquals(5,link.getHealth());
 		assertEquals(146, link.getX());

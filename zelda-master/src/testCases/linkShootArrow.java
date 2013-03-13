@@ -74,7 +74,7 @@ public class linkShootArrow {
 		link.handleInput();
 		game.getScene().handleInput();
 		
-		Thread.sleep(120) ;
+		Thread.sleep(90) ;
 		
 		game.getScene().handleInput();
 

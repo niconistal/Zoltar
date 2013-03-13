@@ -16,8 +16,11 @@ public class Runner {
 		Computer computer = new Computer();
 		JUnitCore junit = new JUnitCore();
 		Result result = junit.run(computer,  AllTests.class );
-		System.out.println(result.getFailureCount());
-		//System.out.println(result.getFailures().get(0).getTestHeader());
+		int fails = result.getFailureCount();
+		System.out.println(fails);
+		if (fails > 0 ){
+			System.out.println(result.getFailures().get(0).getTestHeader());
+		}
 	}
 
 }

@@ -10,13 +10,14 @@ import java.util.ArrayList;
 
 //import org.junit.Test;
 
+import utils2.ExecutionNode;
 import utils2.MethodNode;
 
 public class ActivatorTest {
 	//@Test
 	public static void main (String[] args) {
 	 ObjectInputStream objIn;
-		ArrayList<MethodNode> m12 ;
+		ArrayList<ExecutionNode> m12 ;
 	//	assertTrue("Hello",4<2);
 		try {
 			String fileName = "Spectrum.data";
@@ -29,13 +30,18 @@ public class ActivatorTest {
 			// Read an object
 			Object obj = objIn.readObject();
 			@SuppressWarnings("unchecked")
-			ArrayList<MethodNode> obj2 = (ArrayList<MethodNode>)obj;
+			ArrayList<ExecutionNode> obj2 = (ArrayList<ExecutionNode>)obj;
 			m12 = obj2;
 			System.out.println("Ahora vienen los archivos");
 			
-			for (MethodNode m : m12){	
+			for (ExecutionNode m : m12){	
 				System.out.println("Este es uno!!!");
-				MethodNode.print(m, "") ;
+				//ExecutionNode.print(m) ;
+				System.out.println("Esta ejecucion tiene : "+m.getAllThreadNames().size()+" threads");
+				System.out.println("Los threads se llaman: ");
+				for (String threadName : m.getAllThreadNames()){
+					System.out.println(threadName);
+				}
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

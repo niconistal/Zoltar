@@ -8,20 +8,19 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Stack;
 import org.aspectj.lang.*;
+
+import utils2.ExecutionNode;
 import utils2.MethodNode;
 
 public aspect AOPLogger {
 
 		 String fileName = "Spectrum.data";
 		 private static ObjectInputStream objIn;
-		 
-		 MethodNode spectrum = new MethodNode("APP","",new ArrayList<MethodNode>()) ;
-		 MethodNode currentMethod ; 
-		static Boolean finish = false;
-		 Stack<MethodNode> stacktrace = new Stack<MethodNode>();
+		 static Boolean finish = false;
+		 ExecutionNode spectrum = new ExecutionNode();
 
 		AOPLogger(){
-			stacktrace.add(spectrum) ;
+			
 			
 		}
 		pointcut traceMethods()
@@ -31,23 +30,25 @@ public aspect AOPLogger {
 			&& !within(AOPLogger)
 		    && !within(utils2.*)
 		    && !within(testCases.*)
-		    && !within(zelda.engine.Sound)
-		    && !within(zelda.engine.SoundFx)
-		    && !within(zelda.engine.Music)
 		    && !execution(* *.draw(..));
 		before() : traceMethods(){
 			
 			//System.out.println("traceando");
 			Signature sig = thisJoinPointStaticPart.getSignature();
 			MethodNode currentMethod = new MethodNode(sig.getName(), sig.getDeclaringType().getName(), new ArrayList<MethodNode>());
-			stacktrace.peek().getChildren().add(currentMethod) ;
-			stacktrace.add(currentMethod);
+			String threadName = Thread.currentThread().getName();
+			if (!spectrum.isThread(threadName)){
+				spectrum.newThread(threadName);
+			}
+			spectrum.getThread(threadName).peekFromStack().getChildren().add(currentMethod);
+			spectrum.getThread(threadName).addToStack(currentMethod);
 	
 		}
 		after() : traceMethods(){
 			
-			if (stacktrace.isEmpty()) return ;
-			stacktrace.pop();
+			String threadName = Thread.currentThread().getName();
+			if (spectrum.getThread(threadName).stackIsEmpty()) return ;
+			spectrum.getThread(threadName).popFromStack();
 		}
 		
 		pointcut mainExecution()
@@ -56,7 +57,7 @@ public aspect AOPLogger {
 		after()  : mainExecution() {
 			finish = true;
 			System.out.println("Hello");
-			ArrayList<MethodNode> inputs= new ArrayList<MethodNode>();
+			ArrayList<ExecutionNode> inputs= new ArrayList<ExecutionNode>();
 			
 			//Read the fileName and load all saved methodNodes
 			try {
@@ -71,7 +72,7 @@ public aspect AOPLogger {
 				try {
 					obj = objIn.readObject();
 					@SuppressWarnings("unchecked")
-					ArrayList<MethodNode> obj2 = (ArrayList<MethodNode>)obj;
+					ArrayList<ExecutionNode> obj2 = (ArrayList<ExecutionNode>)obj;
 					inputs = obj2;
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
@@ -93,14 +94,14 @@ public aspect AOPLogger {
 			
 			//save the data into the file.
 			try {
-				System.out.println("empezando a escribir");
+				//System.out.println("empezando a escribir");
 				FileOutputStream fo = new FileOutputStream(fileName);
 				oos = new ObjectOutputStream(fo);
 				oos.writeObject(inputs);
 				
 				//oos.flush();
 				
-				System.out.println("termino");
+				//System.out.println("termino");
 				//oos.close();
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
