@@ -2,7 +2,11 @@ package testCases;
 
 import static org.junit.Assert.*;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.lang.Thread.State;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
 
@@ -50,7 +54,7 @@ public class linkShootArrow {
 		
 		
 		Scene testScene = game.initScene("TestScene");
-		malo = new BlueSoldier(game, 154, 250, Direction.DOWN,5);
+		malo = new BlueSoldier(game, 154, 250, Direction.DOWN,6);
 		PasiveBehavior maloBehave = new PasiveBehavior(malo);
 		malo.setBehavior(maloBehave);
 		malo.setState(new StandState(malo));
@@ -60,31 +64,37 @@ public class linkShootArrow {
 		testScene.addGObject(malo);
 		game.setScene(testScene);
 		view = new View(game, mainView);
-		ctl = new TestController(game, view, mainView);
+ArrayList<Command>  moves = new ArrayList<Command>() ;
+		
+		moves.add(new BowCommand(game)) ;
+		moves.add(new BowCommand(game)) ;
+			
+		moves.add(new DownCommand(game)) ;
+		moves.add(new DownCommand(game)) ;
+
+		moves.add(new BowCommand(game)) ;
+		moves.add(new BowCommand(game)) ;
+		moves.add(new BowCommand(game)) ;
+		moves.add(new BowCommand(game)) ;
+		
+		moves.add(new BowCommand(game)) ;
+
+
+
+		ctl = new TestController(game, view, mainView, moves);
 		
 	}
 	@Test
 	public void test() throws InterruptedException {
+		Link link = game.getLink(); 
 		
-		
-		
-		Link link = game.getLink();
-		Thread.sleep(1000);
-		game.setkPressed(true);
-		link.handleInput();
-		game.getScene().handleInput();
-		
-		Thread.sleep(90) ;
-		
-		game.getScene().handleInput();
+        Thread.sleep(5000) ;
 
-		
-		Thread.sleep(1000);
-		//System.out.println(link.getX()+" "+link.getY());
-		assertEquals(3,malo.getHealth());
+      //System.out.println(link.getX()+" "+link.getY());
+		assertEquals(0,malo.getHealth());
 		assertEquals(5,link.getHealth());
-		//game.quit();
 		
+	
 	}
 
 }

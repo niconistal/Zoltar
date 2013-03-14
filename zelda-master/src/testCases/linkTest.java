@@ -2,7 +2,12 @@ package testCases;
 
 import static org.junit.Assert.*;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
 import java.lang.Thread.State;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
 
@@ -59,54 +64,37 @@ public class linkTest {
 		testScene.addGObject(malo);
 		game.setScene(testScene);
 		view = new View(game, mainView);
-		ctl = new TestController(game, view, mainView);
+		ArrayList<Command>  moves = new ArrayList<Command>() ;
+		
+		moves.add(new LeftCommand(game)) ;
+		moves.add(new LeftCommand(game)) ;
+
+
+		moves.add(new LeftCommand(game)) ;
+		
+		
+		moves.add(new DownCommand(game)) ;
+		moves.add(new DownCommand(game)) ;
+		
+		moves.add(new SwordCommand(game)) ;
+		moves.add(new SwordCommand(game)) ;
+		moves.add(new SwordCommand(game)) ;
+		moves.add(new SwordCommand(game)) ;
+		moves.add(new SwordCommand(game)) ;
+		moves.add(new SwordCommand(game)) ;
+		moves.add(new SwordCommand(game)) ;
+
+
+		ctl = new TestController(game, view, mainView, moves);
 		
 	}
 	@Test
 	public void test() throws InterruptedException {
 		
-		Thread.sleep(2000) ;
-		
-		Link link = game.getLink();
-	
-		game.setaPressed(true) ;
-		
-		link.handleInput() ;
-		Thread.sleep(90) ;
-		
-		link.handleInput() ;
-		Thread.sleep(90) ;
-		
-		link.handleInput() ;
-		Thread.sleep(90) ;
-		
-
-		game.setaPressed(false) ;
-		game.setsPressed(true) ;
-		
-		link.handleInput() ;
-		Thread.sleep(90) ;
-		
-		game.setsPressed(true) ;
-		link.handleInput() ;
-		
-		game.setsPressed(false) ;
-		Thread.sleep(90) ;
-		
-			
-		
-	
-		
-		SwordState swstate = new SwordState(link);
-		link.setState(swstate);
-		link.handleInput();
-		Thread.sleep(1000);
-		//game.quit();
-
-		
-		
-		//System.out.println(link.getX()+" "+link.getY());
-		assertEquals(3,malo.getHealth());
+		Thread.sleep(6000) ;
+		Link link = game.getLink() ;
+		System.out.println(link.getX()+" "+link.getY());
+		//assertEquals(3,malo.getHealth());
 		assertEquals(5,link.getHealth());
 		assertEquals(146, link.getX());
 		assertEquals(158,link.getY());

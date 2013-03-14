@@ -1,8 +1,15 @@
 package zelda;
 
+import java.awt.AWTException;
+import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
+
 import javax.swing.JFrame;
+
+import testCases.BowCommand;
+import testCases.Command;
 import zelda.engine.GObject;
 import zelda.engine.Game;
 import zelda.items.Arrow;
@@ -19,15 +26,20 @@ public class TestController implements Runnable, KeyListener
 	private Game game;
 	private View view;
 	private PolyCreator polyCreator;
+	private Robot robot ;
+	private int currentMove = 0;
+	private boolean isArrow =false  ;
 
-	public TestController(Game game, View view, JFrame frame)
+	private ArrayList<Command> moves ;
+
+	public TestController(Game game, View view, JFrame frame, ArrayList<Command> moves)
 	{
 		this.game = game;
 		this.view = view;
 
 		frame.addMouseListener(new PolyCreator(game));
 		frame.addKeyListener(this);
-
+		this.moves = moves ;
 		thread = new Thread(this, "GameLoop");
 		thread.start();
 	}
@@ -37,28 +49,49 @@ public class TestController implements Runnable, KeyListener
 	 * react on input and draw the game.
 	 */
 	public void run()
-	{
+	{	
+		try
+		{
+		
+		Thread.sleep(1000) ;
 		while (game.isRunning())
 		{
 			
-			for ( GObject arrow : game.getScene().getGObjects()){
-				if (arrow instanceof Arrow)
-					arrow.doInLoop();
-			}
-                    
-                    try {
-                    	view.draw();
-						Thread.sleep(10) ;
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				   
-		}
+				if(!game.isPaused())
+				{
+					if (currentMove == moves.size() && !isArrow) break ;
 
-		// if the game is not running close up.
-		view.exitFullScreen();
-		game.quit();
+					
+					game.getScene().handleInput(); // let scene handle user input for menu's etc.
+
+					if (!isArrow)
+						Thread.sleep(50) ;  
+					if (currentMove < moves.size() && !isArrow ) {
+						moves.get(currentMove).execute() ;
+						game.getLink().handleInput(); // let link handle key input.
+						moves.get(currentMove).finish() ;
+					}
+					isArrow = false ;
+					for(GObject obj : game.getScene().getGObjects())
+					{
+						if (obj instanceof Arrow) 
+							isArrow=true ;
+						obj.doInLoop(); // this lets the GObject hook in on the gameloop
+					}
+					if (currentMove < moves.size() && !isArrow )	
+						currentMove++ ;
+
+				}
+
+                try
+                {
+                    view.draw();
+                }catch(Exception e){}
+				Thread.sleep(game.getGameSpeed());
+			
+		}
+		}
+		catch (InterruptedException e){}
 	}
 
 	public void keyPressed(KeyEvent e)
