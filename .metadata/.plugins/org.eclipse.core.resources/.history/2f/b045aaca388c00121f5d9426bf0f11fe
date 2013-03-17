@@ -1,0 +1,43 @@
+package testCases;
+
+import zelda.engine.Game;
+
+public abstract class Command {
+	
+	protected Game game ;
+	
+	public Command( Game game ) {
+		this.game = game ;
+	}
+	
+	public abstract void execute() ;
+	
+	public abstract void finish() ;
+
+}
+DownCommand:
+package testCases;
+
+import zelda.engine.Game;
+
+public class DownCommand extends Command{
+
+	public DownCommand(Game game) {
+		super(game);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void execute() {
+		this.game.setsPressed(true) ;
+	}
+
+	@Override
+	public void finish() {
+		this.game.setsPressed(false) ;
+		
+	}
+	
+	
+
+}

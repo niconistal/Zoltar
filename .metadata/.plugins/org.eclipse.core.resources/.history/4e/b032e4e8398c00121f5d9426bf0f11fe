@@ -1,0 +1,17 @@
+package testCases;
+
+public class DownCommand extends Command {
+
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void finish() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
