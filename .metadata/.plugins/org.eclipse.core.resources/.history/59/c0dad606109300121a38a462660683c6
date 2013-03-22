@@ -1,0 +1,12 @@
+package utils2;
+
+public class Dummy {
+
+	
+	public static void theLoggingBegins(){
+		
+	}
+	public static void theLoggingEnds(){
+		
+	}
+}

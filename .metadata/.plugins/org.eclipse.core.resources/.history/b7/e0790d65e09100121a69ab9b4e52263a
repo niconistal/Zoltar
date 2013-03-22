@@ -1,0 +1,13 @@
+package testCases;
+
+import java.util.ArrayList;
+
+import junit.framework.TestCase;
+
+public class TestComposite {
+	
+	public TestComposite() {
+		ArrayList<TestCase.class> tests ;
+	}
+
+}

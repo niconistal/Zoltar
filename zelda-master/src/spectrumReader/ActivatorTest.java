@@ -8,51 +8,43 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
+import Zoltar.ZoltarEngine;
+
 //import org.junit.Test;
 
+import utils2.DataManagement;
 import utils2.ExecutionNode;
 import utils2.MethodNode;
 
 public class ActivatorTest {
 	//@Test
+	/**
+	 * @param args
+	 */
+	@SuppressWarnings("unchecked")
 	public static void main (String[] args) {
-	 ObjectInputStream objIn;
-		ArrayList<ExecutionNode> m12 ;
-	//	assertTrue("Hello",4<2);
-		try {
-			String fileName = "Spectrum.data";
-			// Read from disk using FileInputStream
-			FileInputStream f_in = new 
-				FileInputStream(fileName);
-
-			objIn = new ObjectInputStream (f_in);
-
-			// Read an object
-			Object obj = objIn.readObject();
-			@SuppressWarnings("unchecked")
-			ArrayList<ExecutionNode> obj2 = (ArrayList<ExecutionNode>)obj;
-			m12 = obj2;
-			System.out.println("Ahora vienen los archivos");
-			
-			for (ExecutionNode m : m12){	
-				System.out.println("Este es uno!!!");
-				//ExecutionNode.print(m) ;
-				System.out.println("Esta ejecucion tiene : "+m.getAllThreadNames().size()+" threads");
-				System.out.println("Los threads se llaman: ");
-				for (String threadName : m.getAllThreadNames()){
-					System.out.println(threadName);
-				}
-			}
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		ObjectInputStream objIn;
+		ArrayList<ExecutionNode> trace  = new ArrayList<ExecutionNode>();
+		ArrayList<String> errorList = new ArrayList<String>();
+		String fileName = "Spectrum";
+		DataManagement inputFile = new DataManagement(fileName);
+		trace = (ArrayList<ExecutionNode>)inputFile.readFile();
+		fileName = "Failures";
+		inputFile = new DataManagement(fileName);
+		errorList = (ArrayList<String>)inputFile.readFile();
+		/*
+		for (ExecutionNode e : trace){
+			if (e.getName().equals("testCases.linkTest")){
+				ExecutionNode.print(e);
+			}			
 		}
+		for (String faulty : errorList){
+			System.out.println("El error se llama: " + faulty) ;
+		}
+		*/
+		ZoltarEngine theEngine = new ZoltarEngine();
+		System.out.println(theEngine.getResult(trace, errorList));
+		
 	}
 
 }

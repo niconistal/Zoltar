@@ -1,0 +1,28 @@
+package testCases;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import junit.framework.TestCase;
+
+
+
+public class TestComposite {
+	private ArrayList<Class<TestCase>> classList ;
+
+	public TestComposite() {
+	   classList = new ArrayList<Class<TestCase>>();
+	}
+	
+	public void addTest( Class<TestCase> testClass) {
+		classList.add(testClass) ;
+	}
+	
+	public void executeAllTests(){
+		for( Class<TestCase> test : classList ) {
+			(new test()).run() ;
+		}
+	}
+	
+
+}

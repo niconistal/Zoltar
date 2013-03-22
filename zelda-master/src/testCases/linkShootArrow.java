@@ -10,7 +10,10 @@ import java.util.ArrayList;
 
 import javax.swing.JFrame;
 
+import junit.framework.TestCase;
 
+
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -33,7 +36,7 @@ import zelda.link.SwordState;
 import zelda.link.WalkState;
 import zelda.scene.ZeldaScene;
 
-public class linkShootArrow {
+public class linkShootArrow extends TestCase{
 
 	private Game game;
 	private View view;
@@ -86,15 +89,19 @@ ArrayList<Command>  moves = new ArrayList<Command>() ;
 	}
 	@Test
 	public void test() throws InterruptedException {
+
 		Link link = game.getLink(); 
 		
         Thread.sleep(5000) ;
 
       //System.out.println(link.getX()+" "+link.getY());
 		assertEquals(0,malo.getHealth());
-		assertEquals(5,link.getHealth());
-		
+		assertEquals(25,link.getHealth());
+		//fail();
+
 	
 	}
+	
+
 
 }

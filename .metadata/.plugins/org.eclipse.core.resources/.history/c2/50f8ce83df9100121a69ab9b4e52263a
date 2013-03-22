@@ -1,0 +1,20 @@
+package testCases;
+
+import java.util.ArrayList;
+
+public class TestSuite {
+	ArrayList<Class<?>> classes;
+	public TestSuite(){
+		classes = new ArrayList<Class<?>>();
+	}
+	
+	public void addTest(Class<?> a){
+		classes.add(a);
+	}
+
+	public void executeTest(){
+		for (Class<?> a : classes){
+			((TestCase)(new a()).run();
+		}
+	}
+}

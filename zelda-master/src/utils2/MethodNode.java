@@ -47,7 +47,9 @@ public class  MethodNode implements Serializable {
 	public void setMethodName(String methodName) {
 		this.methodName = methodName;
 	}
-	
+	public String getName(){
+		return this.getMethodClass() +"."+this.getMethodName();
+	}
 	public static void print(MethodNode root, String level) {
 		System.out.println(level + root.getMethodClass() + "."+ root.getMethodName() );
 		for( MethodNode child : root.getChildren()) {

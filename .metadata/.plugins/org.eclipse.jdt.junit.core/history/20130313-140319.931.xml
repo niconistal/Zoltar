@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testrun name="linkTest" project="zelda-master" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="testCases.linkTest" time="7.322">
-    <testcase name="test" classname="testCases.linkTest" time="7.322"/>
-  </testsuite>
-</testrun>

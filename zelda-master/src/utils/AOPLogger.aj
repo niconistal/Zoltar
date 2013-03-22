@@ -9,20 +9,34 @@ import java.util.ArrayList;
 import java.util.Stack;
 import org.aspectj.lang.*;
 
+import utils2.DataManagement;
 import utils2.ExecutionNode;
 import utils2.MethodNode;
 
 public aspect AOPLogger {
 
-		 String fileName = "Spectrum.data";
-		 private static ObjectInputStream objIn;
+		 String fileName = "Spectrum";
 		 static Boolean finish = false;
-		 ExecutionNode spectrum = new ExecutionNode();
+		 ExecutionNode spectrum = new ExecutionNode(); ;
+		 private String theCurrentNameOfTheRunningClass;
 
 		AOPLogger(){
 			
-			
 		}
+		
+		//Pointcut definitions go here.
+		
+		pointcut testIsAboutToBegin()
+		: 
+			execution( * *.test(..));
+		
+		pointcut testIsAboutToEnd()
+		: if(!finish)
+			&& execution( * *.test(..));
+		
+		pointcut mainExecution()
+		: (execution (* *.main(..)));
+		
 		pointcut traceMethods()
 		: if(!finish)
 			&&(execution(* *.*(..))
@@ -30,10 +44,24 @@ public aspect AOPLogger {
 			&& !within(AOPLogger)
 		    && !within(utils2.*)
 		    && !within(testCases.*)
-		    && !execution(* *.draw(..));
+		    && !execution(* *.draw(..))
+		    && ! execution(* *.*test());
+		
+		
+		//Set up the trace
+		
+		before() : testIsAboutToBegin(){
+			finish = false;
+			spectrum = new ExecutionNode();
+			System.out.println(thisJoinPoint.getTarget().getClass().getName());
+			theCurrentNameOfTheRunningClass = thisJoinPoint.getTarget().getClass().getName();
+		}
+		
+		//Trace of each method.
+		
 		before() : traceMethods(){
 			
-			//System.out.println("traceando");
+			
 			Signature sig = thisJoinPointStaticPart.getSignature();
 			MethodNode currentMethod = new MethodNode(sig.getName(), sig.getDeclaringType().getName(), new ArrayList<MethodNode>());
 			String threadName = Thread.currentThread().getName();
@@ -46,70 +74,34 @@ public aspect AOPLogger {
 		}
 		after() : traceMethods(){
 			
+			
 			String threadName = Thread.currentThread().getName();
 			if (spectrum.getThread(threadName).stackIsEmpty()) return ;
 			spectrum.getThread(threadName).popFromStack();
 		}
 		
-		pointcut mainExecution()
-		: (execution (* *.main(..)));
+
+		//Write the result of the trace.
 	
-		after()  : mainExecution() {
+		after()  : testIsAboutToEnd() {
+			
+			spectrum.setName(theCurrentNameOfTheRunningClass);
 			finish = true;
-			System.out.println("Hello");
 			ArrayList<ExecutionNode> inputs= new ArrayList<ExecutionNode>();
 			
 			//Read the fileName and load all saved methodNodes
-			try {
-				// Read from disk using FileInputStream
-				FileInputStream f_in = new 
-					FileInputStream(fileName);
-
-				objIn = new ObjectInputStream (f_in);
-
-				// Read an object
-				Object obj;
-				try {
-					obj = objIn.readObject();
-					@SuppressWarnings("unchecked")
-					ArrayList<ExecutionNode> obj2 = (ArrayList<ExecutionNode>)obj;
-					inputs = obj2;
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			
+			DataManagement fileInput = new DataManagement(fileName);
+			Object readInput = fileInput.readFile();
+			inputs = (ArrayList<ExecutionNode>) readInput;
 			
 			inputs.add(spectrum);
-			//MethodNode.print(spectrum, "") ;
 			ObjectOutputStream oos;
 			
 			//save the data into the file.
-			try {
-				//System.out.println("empezando a escribir");
-				FileOutputStream fo = new FileOutputStream(fileName);
-				oos = new ObjectOutputStream(fo);
-				oos.writeObject(inputs);
-				
-				//oos.flush();
-				
-				//System.out.println("termino");
-				//oos.close();
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			
+			DataManagement fileOutput = new DataManagement(fileName);
+			fileOutput.writeFile(inputs);
 			
 		}
 		

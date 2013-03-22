@@ -1,0 +1,29 @@
+package testCases;
+
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
+
+import junit.framework.TestCase;
+
+
+
+public class TestComposite {
+	private ArrayList<Class<TestCase>> classList ;
+
+	public TestComposite() {
+	   classList = new ArrayList<Class<TestCase>>();
+	}
+	
+	public void addTest( Class<TestCase> testClass) {
+		classList.add(testClass) ;
+	}
+	
+	public void executeAllTests() throws IllegalArgumentException, SecurityException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException{
+		for( Class<? extends TestCase> test : classList ) {
+			test.getConstructor().newInstance().run() ;
+		}
+	}
+	
+
+}

@@ -1,0 +1,11 @@
+package utils2;
+
+public class DataManagement {
+	
+	protected String fileName;
+	
+	public DataManagement(String fileName){
+		this.fileName = fileName;
+	}
+
+}

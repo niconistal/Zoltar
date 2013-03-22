@@ -11,9 +11,13 @@ import java.util.ArrayList;
 
 import javax.swing.JFrame;
 
+import junit.framework.TestCase;
 
+
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 
 import zelda.Controller;
 import zelda.TestController;
@@ -35,7 +39,7 @@ import zelda.link.SwordState;
 import zelda.link.WalkState;
 import zelda.scene.ZeldaScene;
 
-public class linkTest {
+public class linkTest extends TestCase {
 
 	private Game game;
 	private View view;
@@ -90,6 +94,7 @@ public class linkTest {
 	}
 	@Test
 	public void test() throws InterruptedException {
+
 		
 		Thread.sleep(6000) ;
 		Link link = game.getLink() ;
@@ -98,6 +103,11 @@ public class linkTest {
 		assertEquals(5,link.getHealth());
 		assertEquals(146, link.getX());
 		assertEquals(158,link.getY());
+
+	}
+	
+	@After
+	public void tearDown(){
 		
 	}
 
