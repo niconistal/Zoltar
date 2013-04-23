@@ -1,9 +1,0 @@
-package testCases;
-
-public class TestComposite {
-	
-	public TestComposite() {
-		ArrayList<TestCase.class> tests ;
-	}
-
-}

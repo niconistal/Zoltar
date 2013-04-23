@@ -96,7 +96,7 @@ ArrayList<Command>  moves = new ArrayList<Command>() ;
 
       //System.out.println(link.getX()+" "+link.getY());
 		assertEquals(0,malo.getHealth());
-		assertEquals(25,link.getHealth());
+		assertEquals(5,link.getHealth());
 		//fail();
 
 	
